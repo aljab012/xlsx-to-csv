@@ -130,7 +130,7 @@ main_folder/
    ```
 
 # Contact
-Alhaitham Al Jabri - [My website](https://jabri.dev/)
+Alhaitham Al Jabri - [My website](https://jabri.dev/)  
 This project [Live demo](https://csv-my-app.herokuapp.com/)
 
 # Acknowledgements
