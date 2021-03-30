@@ -1,0 +1,48 @@
+{% extends "parser_app/base.html" %}
+
+<!-- title -->
+{% block title %} xlsx to csv file converter {% endblock %}
+
+<!-- content -->
+{% block content %}
+  <div class="container">
+
+    <!-- main headers -->
+    <h3 class="display-4">Excel to CSV</h3>
+    <p class="lead"> Convert your XLSX files to CVS</p>
+    <br>
+
+    <!-- upload form -->
+    <form class="form-upload" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <!-- choosing file button -->
+      <div class="form-group">
+        <input type="file" class="form-control-file form-control-lg btn btn-secondary"  name="doc" >
+      </div>
+
+      <!-- error messages -->
+      <div class="form-group">
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
+        {{ message }}
+      </div>
+      {% endfor %}
+      {% endif%}
+      </div>
+
+      <!-- submit button -->
+      <div class="form-group">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Convert</button>
+      </div>
+      
+      <!-- Download button -->
+      {% if url %}
+      <a href="{{ url }}" class="btn btn-success btn-lg">Download {{file_name}}</a>
+      <br>
+      {% endif %}
+      <p class="mt-4 mb-3 text-muted">&copy; "Company name"</p>
+    </form>
+</div>
+{% endblock %}
