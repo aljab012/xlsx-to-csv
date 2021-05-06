@@ -131,7 +131,7 @@ main_folder/
 
 # Contact
 Alhaitham Al Jabri - [My website](https://jabri.dev/)  
-This project [Live demo](https://csv-my-app.herokuapp.com/)
+
 
 # Acknowledgements
 * [Django documentation](https://docs.djangoproject.com/en/3.1/)
